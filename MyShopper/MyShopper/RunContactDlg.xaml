@@ -1,0 +1,19 @@
+﻿<Window x:Class="MyShopper.RunContactDlg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyShopper"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+        Title="Contact Us" Width="300" Height="245" ResizeMode="NoResize" Background="LightGray" KeyDown="Window_KeyDown">
+    <Grid>
+        <Image x:Name="imgContact" Margin="7,0,7,90" Width="280" Loaded="imgContact_Loaded"/>
+        <StackPanel Orientation="Vertical">
+            <ScrollViewer x:Name="scrollViewer" Height="70" Width="280" Margin="0,115,0,0" VerticalScrollBarVisibility="Hidden">
+                <TextBlock x:Name="tbMessage" Margin="5" TextWrapping="Wrap" FontFamily="Buxton Sketch" FontSize="14"></TextBlock>
+            </ScrollViewer>
+            <Label Height="30" FontFamily="Engravers MT" HorizontalAlignment="Center">bossgamesdevteam@gmail.com</Label>
+        </StackPanel>
+    </Grid>
+</Window>
