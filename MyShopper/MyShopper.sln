@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShopper", "MyShopper\MyShopper.csproj", "{B95818A0-36B4-4779-B508-26B32519A49B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MyShopper Installation", "MyShopper Installation\MyShopper Installation.vdproj", "{FD158484-2544-4660-B6FA-6F50E804C783}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{B95818A0-36B4-4779-B508-26B32519A49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B95818A0-36B4-4779-B508-26B32519A49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B95818A0-36B4-4779-B508-26B32519A49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD158484-2544-4660-B6FA-6F50E804C783}.Debug|Any CPU.ActiveCfg = Debug
+		{FD158484-2544-4660-B6FA-6F50E804C783}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
