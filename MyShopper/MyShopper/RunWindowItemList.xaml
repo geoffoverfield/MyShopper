@@ -5,11 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              x:Name="myWindow"
-            MaxWidth="800" Width="Auto" MaxHeight="1000" Height="Auto" 
-            Title="My Shopping Cart" KeyDown="Window_KeyDown" d:DesignHeight="625">
+            Width="800" Height="Auto" ResizeMode="CanMinimize"
+            Title="My Shopping Cart" KeyDown="Window_KeyDown" d:DesignHeight="1300">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <TabControl x:Name="tTabs" MaxHeight="830" Height="400" BorderBrush="Black" BorderThickness="2">
+            <TabControl x:Name="tTabs" Height="400" BorderBrush="Black" BorderThickness="2">
                 <TabItem Header="Fruit" Width="60">
                     <ScrollViewer>
                         <Grid>
@@ -1493,7 +1493,7 @@
                                             <StackPanel Orientation="Vertical" Width="220">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbBeer1" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbBeer1" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer1}"/>
+                                                    <TextBox x:Name="tbBeer1" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer1}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbBeer6pO1" Content="6 Pack" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbBeer1}"/>
@@ -1504,7 +1504,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbBeer2" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbBeer2" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer2}"/>
+                                                    <TextBox x:Name="tbBeer2" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer2}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbBeer6pO2" Content="6 Pack" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbBeer2}"/>
@@ -1515,7 +1515,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbBeer3" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbBeer3" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer3}"/>
+                                                    <TextBox x:Name="tbBeer3" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer3}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbBeer6pO3" Content="6 Pack" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbBeer3}"/>
@@ -1526,7 +1526,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbBeer4" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbBeer4" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer4}"/>
+                                                    <TextBox x:Name="tbBeer4" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer4}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbBeer6pO4" Content="6 Pack" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbBeer4}"/>
@@ -1537,7 +1537,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbBeer5" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbBeer5" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer5}"/>
+                                                    <TextBox x:Name="tbBeer5" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbBeer5}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbBeer6pO5" Content="6 Pack" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbBeer5}"/>
@@ -1549,7 +1549,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbLiquor1" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbLiquor1" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor1}"/>
+                                                    <TextBox x:Name="tbLiquor1" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor1}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbLiquorPO1" Content="Pint" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor1}"/>
@@ -1560,7 +1560,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbLiquor2" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbLiquor2" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor2}"/>
+                                                    <TextBox x:Name="tbLiquor2" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor2}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbLiquorPO2" Content="Pint" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor2}"/>
@@ -1571,7 +1571,7 @@
                                             <StackPanel Orientation="Vertical">
                                                 <DockPanel Margin="0,2,0,0">
                                                     <CheckBox x:Name="cbLiquor3" Margin="0,5" Height="15"/>
-                                                    <TextBox x:Name="tbLiquor3" Margin="5,0,0,0" HorizontalAlignment="Left" Width="80" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor3}"/>
+                                                    <TextBox x:Name="tbLiquor3" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor3}"/>
                                                 </DockPanel>
                                                 <DockPanel>
                                                     <RadioButton x:Name="rbLiquorPO3" Content="Pint" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor3}"/>
@@ -1579,9 +1579,65 @@
                                                     <RadioButton x:Name="rbLiquorHandO3" Content="Handle" Margin="15,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor3}"/>
                                                 </DockPanel>
                                             </StackPanel>
+                                            <StackPanel Orientation="Vertical">
+                                                <DockPanel Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbLiquor4" Margin="0,5" Height="15"/>
+                                                    <TextBox x:Name="tbLiquor4" Margin="5,0,0,0" HorizontalAlignment="Left" Width="140" BorderBrush="Black" IsEnabled="{Binding IsChecked, ElementName=cbLiquor3}"/>
+                                                </DockPanel>
+                                                <DockPanel>
+                                                    <RadioButton x:Name="rbLiquorPO4" Content="Pint" Margin="5,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor4}"/>
+                                                    <RadioButton x:Name="rbLiquor5O4" Content="1/5" Margin="15,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor4}"/>
+                                                    <RadioButton x:Name="rbLiquorHandO4" Content="Handle" Margin="15,0,0,0" IsEnabled="{Binding IsChecked, ElementName=cbLiquor4}"/>
+                                                </DockPanel>
+                                            </StackPanel>
                                         </StackPanel>
                                     </GroupBox>
-                                    <GroupBox Header="Other" Margin="20,0,0,0">
+                                    <StackPanel Orientation="Vertical">
+                                        <GroupBox Header="Juice" Margin="20,0,0,0">
+                                            <StackPanel x:Name="spJuice" Orientation="Vertical" Width="220">
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuiceApple" Content="Apple" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuiceApple" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceApple}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuiceCran" Content="Cranberry" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuiceCran" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceCran}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuiceGF" Content="Grapefruit" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuiceGF" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceGF}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuiceLemon" Content="Lemon" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuiceLemon" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceLemon}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuiceLime" Content="Lime" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuiceLime" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceLime}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbOJ" Content="Orange" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxOJ" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbOJ}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuicePine" Content="Pineapple" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuicePine" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuicePine}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbJuiceTomato" Content="Tomato" Margin="0,5" Height="15"/>
+                                                    <ComboBox x:Name="cmbxJuiceTomato" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceTomato}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                            </StackPanel>
+                                        </GroupBox>
+                                        <GroupBox Header="Other" Margin="20,0,0,0">
                                         <StackPanel x:Name="spBevOther" Orientation="Vertical" Width="220">
                                             <DockPanel  Margin="0,2,0,0">
                                                 <CheckBox x:Name="cbCoffeeFilters" Content="Coffee Filters" Margin="0,5" Height="15"/>
@@ -1608,6 +1664,7 @@
                                             </DockPanel>
                                         </StackPanel>
                                     </GroupBox>
+                                    </StackPanel>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
                                     <GroupBox Header="Soda" Margin="20,0,0,2">
@@ -1661,130 +1718,86 @@
                                             </StackPanel>
                                         </StackPanel>
                                     </GroupBox>
-                                    <GroupBox Header="Juice" Margin="20,0,0,0">
-                                        <StackPanel x:Name="spJuice" Orientation="Vertical" Width="220">
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuiceApple" Content="Apple" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuiceApple" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceApple}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuiceCran" Content="Cranberry" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuiceCran" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceCran}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuiceGF" Content="Grapefruit" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuiceGF" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceGF}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuiceLemon" Content="Lemon" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuiceLemon" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceLemon}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuiceLime" Content="Lime" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuiceLime" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceLime}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbOJ" Content="Orange" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxOJ" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbOJ}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuicePine" Content="Pineapple" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuicePine" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuicePine}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbJuiceTomato" Content="Tomato" Margin="0,5" Height="15"/>
-                                                <ComboBox x:Name="cmbxJuiceTomato" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbJuiceTomato}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
+                                    <GroupBox Header="Wine" Margin="5,0,0,0" HorizontalAlignment="Left">
+                                        <StackPanel x:Name="spWine" Orientation="Horizontal">
+                                            <StackPanel Orientation="Vertical" Width="230">
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbWineRed" Content="Red:" Margin="0,5" Height="15"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbBlend" Content="Blend" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxBlend" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbBlend}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbCabernet" Content="Cabernet" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxCabernet" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbCabernet}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbChianti" Content="Chianti" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxChianti" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbChianti}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbPinotNoir" Content="Pinot Noir" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxPinotNoir" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbPinotNoir}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbMalbec" Content="Malbec" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxMalbec" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbMalbec}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbMerlot" Content="Merlot" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxMerlot" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbMerlot}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbShiraz" Content="Shiraz" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxShiraz" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbShiraz}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbZin" Content="Zinfandel" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxZin" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbZin}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Vertical" Width="240"  Margin="15,0,0,0">
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbWineWhite" DockPanel.Dock="Right" Content="White:" Margin="0,5" Height="15"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbChardonay" Content="Chardonnay" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxChardonay" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbChardonay}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbMoscato" Content="Moscato" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxMoscato" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbMoscato}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbPinotGrigio" Content="Pinot Grigio" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxPinotGrigio" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbPinotGrigio}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbReisling" Content="Riesling" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxReisling" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbReisling}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                                <DockPanel  Margin="0,2,0,0">
+                                                    <CheckBox x:Name="cbSauvBlanc" Content="Sauvignon Blanc" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
+                                                    <ComboBox x:Name="cmbxSauvBlanc" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbSauvBlanc}"/>
+                                                    <Label Content="Quantity:" HorizontalAlignment="Right"/>
+                                                </DockPanel>
+                                            </StackPanel>
                                         </StackPanel>
                                     </GroupBox>
                                 </StackPanel>
-                                <GroupBox Header="Wine" Margin="5,0,0,0" HorizontalAlignment="Left">
-                                    <StackPanel x:Name="spWine" Orientation="Horizontal">
-                                        <StackPanel Orientation="Vertical" Width="230">
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbWineRed" Content="Red:" Margin="0,5" Height="15"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbBlend" Content="Blend" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxBlend" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbBlend}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbCabernet" Content="Cabernet" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxCabernet" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbCabernet}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbChianti" Content="Chianti" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxChianti" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbChianti}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbPinotNoir" Content="Pinot Noir" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxPinotNoir" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbPinotNoir}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbMalbec" Content="Malbec" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxMalbec" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbMalbec}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbMerlot" Content="Merlot" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxMerlot" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbMerlot}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbShiraz" Content="Shiraz" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxShiraz" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbShiraz}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbZin" Content="Zinfandel" IsEnabled="{Binding IsChecked, ElementName=cbWineRed}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxZin" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbZin}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Vertical" Width="240"  Margin="15,0,0,0">
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbWineWhite" DockPanel.Dock="Right" Content="White:" Margin="0,5" Height="15"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbChardonay" Content="Chardonnay" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxChardonay" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbChardonay}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbMoscato" Content="Moscato" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxMoscato" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbMoscato}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbPinotGrigio" Content="Pinot Grigio" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxPinotGrigio" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbPinotGrigio}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbReisling" Content="Riesling" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxReisling" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbReisling}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                            <DockPanel  Margin="0,2,0,0">
-                                                <CheckBox x:Name="cbSauvBlanc" Content="Sauvignon Blanc" IsEnabled="{Binding IsChecked, ElementName=cbWineWhite}" Margin="10,2,0,0" Height="15"/>
-                                                <ComboBox x:Name="cmbxSauvBlanc" DockPanel.Dock="Right" Width="40" IsEnabled="{Binding IsChecked, ElementName=cbSauvBlanc}"/>
-                                                <Label Content="Quantity:" HorizontalAlignment="Right"/>
-                                            </DockPanel>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </GroupBox>
                             </StackPanel>
                         </Grid>
                     </ScrollViewer>
@@ -2638,7 +2651,7 @@
                 </TabItem>
             </TabControl>
             <Label HorizontalAlignment="Center">Other</Label>
-            <GroupBox Height="150" BorderBrush="Black" BorderThickness="2">
+            <GroupBox Height="200" BorderBrush="Black" BorderThickness="2">
                 <ScrollViewer>
                     <StackPanel x:Name="spOther" Orientation="Horizontal" Margin="0,5,0,0">
                         <StackPanel Orientation="Vertical" Margin="20,0,0,0">
