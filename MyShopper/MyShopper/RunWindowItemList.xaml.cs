@@ -121,12 +121,7 @@ namespace MyShopper
             foreach (DockPanel dp in spCondiments.Children)                                 //CONDIMENTS
                 foreach (var control in dp.Children)
                     if (control.GetType() == typeof(ComboBox))
-                        ((ComboBox)control).ItemsSource = lstComboContent;
-            foreach (StackPanel sp in spDairyOther.Children)                                //OTHER
-                foreach (DockPanel dp in sp.Children)
-                    foreach (var control in dp.Children)
-                        if (control.GetType() == typeof(ComboBox))
-                            ((ComboBox)control).ItemsSource = lstComboContent;
+                        ((ComboBox)control).ItemsSource = lstComboContent;                  
 
             //  FROZEN
             foreach (StackPanel spVert in spFrozen.Children)
@@ -242,10 +237,6 @@ namespace MyShopper
                 foreach (var control in dp.Children)
                     if (control.GetType() == typeof(ComboBox))
                         ((ComboBox)control).ItemsSource = lstComboMassContent;
-            foreach (DockPanel dp in spProteinOther.Children)                              //OTHER
-                foreach (var control in dp.Children)
-                    if (control.GetType() == typeof(ComboBox))
-                        ((ComboBox)control).ItemsSource = lstComboContent;
 
             //CARBS
             foreach (DockPanel dp in spPasta.Children)                                      //PASTA
@@ -260,11 +251,6 @@ namespace MyShopper
                 foreach (var control in dp.Children)
                     if (control.GetType() == typeof(ComboBox))
                         ((ComboBox)control).ItemsSource = lstComboContent;
-            foreach (StackPanel spVert in spCarbOther.Children)                             //OTHER
-                foreach (DockPanel dp in spVert.Children)
-                    foreach (var control in dp.Children)
-                        if (control.GetType() == typeof(ComboBox))
-                            ((ComboBox)control).ItemsSource = lstComboContent;
 
             //MISC
             foreach (DockPanel dp in spSpice.Children)                                      //SPICES
@@ -279,10 +265,13 @@ namespace MyShopper
                 foreach (var control in dp.Children)                                        //SUPPLIES
                     if (control.GetType() == typeof(ComboBox))
                         ((ComboBox)control).ItemsSource = lstComboContent;
-            foreach (DockPanel dp in spMiscOther.Children)                                  //OTHER
-                foreach (Control control in dp.Children)
-                    if (control.GetType() == typeof(ComboBox))
-                        ((ComboBox)control).ItemsSource = lstComboContent;
+
+            //OTHER
+            foreach (StackPanel spVert in spOther.Children)
+                foreach (DockPanel dp in spVert.Children)
+                    foreach (var control in dp.Children)
+                        if (control.GetType() == typeof(ComboBox))
+                            ((ComboBox)control).ItemsSource = lstComboContent;
         }
 
         /// <summary>
@@ -329,8 +318,6 @@ namespace MyShopper
                 addItemsFromPanel(sp, " Cheese", QUANTITY_FORMAT.INT);
 
             addItemsFromPanel(spMilk, " Milk", QUANTITY_FORMAT.INT);                            //MILK
-            foreach (StackPanel sp in spDairyOther.Children)
-                addItemsFromPanel(sp, sNoTag, QUANTITY_FORMAT.INT);                             //OTHER
 
             //  FROZEN
             foreach (StackPanel spVert in spFrozen.Children)
@@ -540,8 +527,49 @@ namespace MyShopper
                 if (!string.IsNullOrEmpty(pItem.sItemName))
                     m_lItems.Add(pItem);
             }
-            foreach (StackPanel sp in spPantryOther.Children)                                   //OTHER
-                addItemsFromPanel(sp, sNoTag, QUANTITY_FORMAT.INT);
+            foreach (StackPanel spVert in spPantryOther.Children)                                   //OTHER
+            {
+                foreach (DockPanel dp in spVert.Children)
+                {
+                    if (dp.Children.Count < 3) continue;
+                    pItem = new ShoppingItem();
+                    foreach (Control control in dp.Children)
+                    {
+                        if (control.GetType() == typeof(CheckBox))
+                        {
+                            if (((CheckBox)control).IsChecked == true)                              //IS IT CHECKED?
+                            {
+                                if (((CheckBox)control).Content != null)                            //DOES IT HAVE CONTENT?
+                                {
+                                    string sItemName = ((CheckBox)control).Content as string;
+                                    if (sItemName == "Kidney" ||
+                                        sItemName == "Garbonzo" ||
+                                        sItemName == "Pinto")
+                                        sItemName += " Beans";
+                                    pItem.sItemName = sItemName;
+                                }
+                            }
+                        }
+                        else if (control.GetType() == typeof(ComboBox))                             //ARE WE ON A COMBO BOX?
+                        {
+                            if (((ComboBox)control).IsEnabled == true)                              //IS IT ENABLED?
+                            {
+                                if (((ComboBox)control).SelectedValue != null)                      //IS THERE A SELECTED VALUE?
+                                {
+                                    int qty = Convert.ToInt32(((ComboBox)control).SelectedValue);
+                                    pItem.Quantity = qty;
+                                }
+                                else if (((ComboBox)control).SelectedValue == null)
+                                {
+                                    pItem.Quantity = 0;
+                                }
+                            }
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(pItem.sItemName))
+                        m_lItems.Add(pItem);
+                }
+            }
 
             //  BEVERAGES
             foreach (DockPanel dp in spCoffee.Children)                                         //COFFEE
@@ -923,15 +951,11 @@ namespace MyShopper
             pCtr = 1;                                                                           //RESET COUNTER
 
             addItemsFromPanel(spPork, " (Pork)", QUANTITY_FORMAT.DOUBLE);
-            addItemsFromPanel(spProteinOther, sNoTag, QUANTITY_FORMAT.INT);                     //OTHER
 
             //CARBS
             addItemsFromPanel(spPasta, " Pasta", QUANTITY_FORMAT.INT);                          //PASTA
             addItemsFromPanel(spRice, sNoTag, QUANTITY_FORMAT.INT);                             //RICE
             addItemsFromPanel(spBread, sNoTag, QUANTITY_FORMAT.INT);                            //BREAD
-
-            foreach (StackPanel sp in spCarbOther.Children)                                     //OTHER
-                addItemsFromPanel(sp, sNoTag, QUANTITY_FORMAT.INT);
 
             //MISC
             addItemsFromPanel(spSpice, sNoTag, QUANTITY_FORMAT.INT);                            //SPICES
@@ -995,7 +1019,41 @@ namespace MyShopper
                     m_lItems.Add(pItem);
             }
             addItemsFromPanel(spUtils, sNoTag, QUANTITY_FORMAT.INT);                            //UTENSILS AND SUPPLIES
-            addItemsFromPanel(spMiscOther, sNoTag, QUANTITY_FORMAT.INT);                        //OTHER
+            addItemsFromPanel(spFirstAid, sNoTag, QUANTITY_FORMAT.INT);                         //FIRST AID ITEMS
+
+            //OTHER GROUP BOX
+            foreach (StackPanel spVert in spOther.Children)
+            {
+                foreach (DockPanel dp in spVert.Children)
+                {
+                    pItem = new ShoppingItem();
+                    foreach (Control control in dp.Children)
+                    {
+                        if (control.GetType() == typeof(TextBox))
+                        {
+                            if (((TextBox)control).IsEnabled == true)
+                            {
+                                string sVal = ((TextBox)control).Text;
+                                pItem.sItemName = sVal;
+                            }
+                        }
+                        else if (control.GetType() == typeof(ComboBox))
+                        {
+                            if (((ComboBox)control).IsEnabled == true)
+                            {
+                                if (((ComboBox)control).SelectedValue != null)
+                                {
+                                    int qty = Convert.ToInt32(((ComboBox)control).SelectedValue);
+                                    pItem.Quantity = qty;
+                                }
+                                else pItem.Quantity = 0;
+                            }
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(pItem.sItemName))
+                        m_lItems.Add(pItem);
+                }
+            }
         }
 
         /// <summary>
@@ -1021,7 +1079,6 @@ namespace MyShopper
                                 string sItemName = ((CheckBox)control).Content as string;
                                 pItem.sItemName = sItemName + sCustomTag;
                             }
-
                         }
                     }
                     else if (control.GetType() == typeof(TextBox))                          //IF THE CHECK BOX DOESN'T HAVE CONTENT 
@@ -1056,10 +1113,7 @@ namespace MyShopper
                                         pItem.Mass = mass;
                                         pItem.bPounds = true;
                                         break;
-
                                 }
-
-
                             }
                             else if (((ComboBox)control).SelectedValue == null)
                             {
@@ -1073,7 +1127,6 @@ namespace MyShopper
                                         pItem.bPounds = true;
                                         break;
                                 }
-
                             }
                         }
                     }
@@ -1096,7 +1149,7 @@ namespace MyShopper
         }
 
         /// <summary>
-        /// Create our Word Document and export our List to it
+        /// Create our Word Document, Excel Document or text file and export our List to it
         /// </summary>
         /// <param name="lstItems">Represents our full List of ShoppingItem's including name and Qty/Mass/Volume</param>
         /// This Master List should be created prior to this being called
@@ -1127,16 +1180,15 @@ namespace MyShopper
                 int itr = 0;
                 string[] sList = new string[lstItems.Count];
 
-
                 foreach (ShoppingItem sItem in lstItems)                                        //LET'S LOOK AT ALL OF OUR ITEMS
                 {
                     string sUnit;
                     if (sItem.bOunches) sUnit = "oz.(s)";
                     else if (sItem.bPounds) sUnit = "lb.(s)";
                     else sUnit = "";
-                    string sQty = sItem?.Quantity.ToString();                                   //LET'S FIND OUR QUANTITY
+                    string sQty = sItem.Quantity.ToString();                                   //LET'S FIND OUR QUANTITY
                     if (sQty == null || sQty == "0")
-                        sQty = sItem?.Mass.ToString();
+                        sQty = sItem.Mass.ToString();
                     if (sQty == null || sQty == "0")
                     {
                         if (sItem.Volume != null)
@@ -1167,6 +1219,7 @@ namespace MyShopper
                             pWordApp.ActiveDocument.Close();
                             MessageBox.Show("Your list is empty or could not be created!", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                             //NEEDS TO ALSO CLOSE MS WORD.  DOESN'T AND I CAN'T FIND A WAY SO FAR...
+                            pWordApp.ActiveWindow.Close();
                         }
 
                         break;
@@ -1213,9 +1266,9 @@ namespace MyShopper
                             if (pItem.bOunches) sUnit = "oz.(s)";
                             else if (pItem.bPounds) sUnit = "lb.(s)";
                             else sUnit = "";
-                            string sQty = pItem?.Quantity.ToString();                                   //LET'S FIND OUR QUANTITY
+                            string sQty = pItem.Quantity.ToString();                                   //LET'S FIND OUR QUANTITY
                             if (sQty == null || sQty == "0")
-                                sQty = pItem?.Mass.ToString();
+                                sQty = pItem.Mass.ToString();
                             if (sQty == null || sQty == "0")
                             {
                                 if (pItem.Volume != null)
