@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap mp rescap">
-  <Identity Name="53173BOSSGames.2734798693702" Version="1.1.0.4" Publisher="CN=72B3AB87-D015-49FD-BBA2-CA277EB2FD69" />
+  <Identity Name="53173BOSSGames.2734798693702" Version="1.1.0.6" Publisher="CN=72B3AB87-D015-49FD-BBA2-CA277EB2FD69" />
   <Properties>
     <DisplayName>MyShopper</DisplayName>
     <PublisherDisplayName>BOSS Games</PublisherDisplayName>
     <Logo>images\Cart_Icon.png</Logo>
   </Properties>
   <Prerequisites>
-    <OSMinVersion>10.0.0</OSMinVersion>
-    <OSMaxVersionTested>10.0.0</OSMaxVersionTested>
+    <OSMinVersion>8.0.0</OSMinVersion>
+    <OSMaxVersionTested>10.0.14393</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="MyShopper" Executable="win32\MyShopper.exe" EntryPoint="Windows.FullTrustApplication">
+    <Application Id="MyShopper" Executable="win32\MyShopper.exe">
       <m2:VisualElements DisplayName="WinStore_Packaging" Description="WinStore_Packaging" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
         <m2:SplashScreen Image="images\splashscreen.png" />
       </m2:VisualElements>
@@ -22,6 +22,5 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
-    <rescap:Capability Name="runFullTrust" />
   </Capabilities>
 </Package>
